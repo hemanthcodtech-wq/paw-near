@@ -110,14 +110,14 @@ export default function HomePage() {
               to={category.id === 'grooming' || category.id === 'clinic' || category.id === 'boarding'
                 ? `/services?tab=${category.id}`
                 : `/category/${category.id}`}
-              className="group bg-[#FFF9F0] rounded-2xl sm:rounded-3xl p-3 sm:p-4 hover:bg-[#FDF4E3] transition-all duration-300 flex flex-col items-center text-center relative overflow-hidden"
+              className="group bg-white rounded-2xl sm:rounded-3xl p-3 sm:p-4 hover:bg-slate-50 border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center relative overflow-hidden"
             >
               {/* Category 3D Image Avatar */}
               <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 mb-1.5 sm:mb-2 overflow-hidden flex items-center justify-center">
                 <img
                   src={category.image}
                   alt={category.name}
-                  className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300 drop-shadow-sm"
+                  className="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-300 drop-shadow-sm"
                 />
               </div>
 
