@@ -420,4 +420,1554 @@ export const PRODUCTS = [
     feedingGuide: 'Adult Cat (3-4kg): 50-60g dry kibbles daily or combine with 1 Whiskas wet pouch.',
     composition: 'Real Ocean Fish, Whole Grains, Taurine, Vitamin Blend'
   }
+  , {
+    id: 'prod-1001',
+    name: 'Premium Cat Accessories Pack 1',
+    shortName: 'Cat accessories 1',
+    category: 'accessories',
+    subcategory: 'General',
+    petType: 'Cat',
+    brand: 'PetCare Co.',
+    price: 1867,
+    mrp: 2250,
+    discountPercent: 17,
+    rating: 3.9,
+    reviewsCount: 801,
+    isTopPick: true,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 39,
+    storeId: 'store-2',
+    storeName: 'Canine Castle Pet Hub',
+    storeDistance: '0.7 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 1867, mrp: 2250, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 37,
+    description: 'High quality Cat accessories product for everyday use.'
+  }
+  , {
+    id: 'prod-1002',
+    name: 'Premium Bird Medicine Pack 2',
+    shortName: 'Bird medicine 2',
+    category: 'medicine',
+    subcategory: 'General',
+    petType: 'Bird',
+    brand: 'PetCare Co.',
+    price: 1324,
+    mrp: 1634,
+    discountPercent: 19,
+    rating: 5.0,
+    reviewsCount: 889,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 34,
+    storeId: 'store-3',
+    storeName: 'Pet Paradise Express',
+    storeDistance: '4.9 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 1324, mrp: 1634, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 31,
+    description: 'High quality Bird medicine product for everyday use.'
+  }
+  , {
+    id: 'prod-1003',
+    name: 'Premium Fish Grooming Pack 3',
+    shortName: 'Fish grooming 3',
+    category: 'grooming',
+    subcategory: 'General',
+    petType: 'Fish',
+    brand: 'PetCare Co.',
+    price: 621,
+    mrp: 975,
+    discountPercent: 36,
+    rating: 4.1,
+    reviewsCount: 331,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 39,
+    storeId: 'store-4',
+    storeName: 'Apollo Pet Pharmacy & Health',
+    storeDistance: '0.6 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 621, mrp: 975, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 14,
+    description: 'High quality Fish grooming product for everyday use.'
+  }
+  , {
+    id: 'prod-1004',
+    name: 'Premium Dog Food Pack 4',
+    shortName: 'Dog food 4',
+    category: 'food',
+    subcategory: 'General',
+    petType: 'Dog',
+    brand: 'PetCare Co.',
+    price: 1135,
+    mrp: 1568,
+    discountPercent: 28,
+    rating: 4.5,
+    reviewsCount: 807,
+    isTopPick: true,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 12,
+    storeId: 'store-1',
+    storeName: 'Paws & Whiskers Supermart',
+    storeDistance: '0.8 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 1135, mrp: 1568, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 40,
+    description: 'High quality Dog food product for everyday use.'
+  }
+  , {
+    id: 'prod-1005',
+    name: 'Premium Cat Accessories Pack 5',
+    shortName: 'Cat accessories 5',
+    category: 'accessories',
+    subcategory: 'General',
+    petType: 'Cat',
+    brand: 'PetCare Co.',
+    price: 2135,
+    mrp: 2394,
+    discountPercent: 11,
+    rating: 3.7,
+    reviewsCount: 799,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 38,
+    storeId: 'store-2',
+    storeName: 'Canine Castle Pet Hub',
+    storeDistance: '4.9 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 2135, mrp: 2394, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 26,
+    description: 'High quality Cat accessories product for everyday use.'
+  }
+  , {
+    id: 'prod-1006',
+    name: 'Premium Bird Medicine Pack 6',
+    shortName: 'Bird medicine 6',
+    category: 'medicine',
+    subcategory: 'General',
+    petType: 'Bird',
+    brand: 'PetCare Co.',
+    price: 827,
+    mrp: 1314,
+    discountPercent: 37,
+    rating: 3.8,
+    reviewsCount: 843,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 15,
+    storeId: 'store-3',
+    storeName: 'Pet Paradise Express',
+    storeDistance: '2.9 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 827, mrp: 1314, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 3,
+    description: 'High quality Bird medicine product for everyday use.'
+  }
+  , {
+    id: 'prod-1007',
+    name: 'Premium Fish Grooming Pack 7',
+    shortName: 'Fish grooming 7',
+    category: 'grooming',
+    subcategory: 'General',
+    petType: 'Fish',
+    brand: 'PetCare Co.',
+    price: 1796,
+    mrp: 1994,
+    discountPercent: 10,
+    rating: 3.9,
+    reviewsCount: 261,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 39,
+    storeId: 'store-4',
+    storeName: 'Apollo Pet Pharmacy & Health',
+    storeDistance: '3.3 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 1796, mrp: 1994, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 22,
+    description: 'High quality Fish grooming product for everyday use.'
+  }
+  , {
+    id: 'prod-1008',
+    name: 'Premium Dog Food Pack 8',
+    shortName: 'Dog food 8',
+    category: 'food',
+    subcategory: 'General',
+    petType: 'Dog',
+    brand: 'PetCare Co.',
+    price: 1255,
+    mrp: 1799,
+    discountPercent: 30,
+    rating: 3.5,
+    reviewsCount: 165,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 30,
+    storeId: 'store-1',
+    storeName: 'Paws & Whiskers Supermart',
+    storeDistance: '5.4 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 1255, mrp: 1799, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 48,
+    description: 'High quality Dog food product for everyday use.'
+  }
+  , {
+    id: 'prod-1009',
+    name: 'Premium Cat Accessories Pack 9',
+    shortName: 'Cat accessories 9',
+    category: 'accessories',
+    subcategory: 'General',
+    petType: 'Cat',
+    brand: 'PetCare Co.',
+    price: 1456,
+    mrp: 1865,
+    discountPercent: 22,
+    rating: 4.8,
+    reviewsCount: 995,
+    isTopPick: true,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 37,
+    storeId: 'store-2',
+    storeName: 'Canine Castle Pet Hub',
+    storeDistance: '5.4 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 1456, mrp: 1865, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 40,
+    description: 'High quality Cat accessories product for everyday use.'
+  }
+  , {
+    id: 'prod-10010',
+    name: 'Premium Bird Medicine Pack 10',
+    shortName: 'Bird medicine 10',
+    category: 'medicine',
+    subcategory: 'General',
+    petType: 'Bird',
+    brand: 'PetCare Co.',
+    price: 1320,
+    mrp: 1548,
+    discountPercent: 15,
+    rating: 3.7,
+    reviewsCount: 24,
+    isTopPick: true,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 10,
+    storeId: 'store-3',
+    storeName: 'Pet Paradise Express',
+    storeDistance: '1.8 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 1320, mrp: 1548, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 13,
+    description: 'High quality Bird medicine product for everyday use.'
+  }
+  , {
+    id: 'prod-10011',
+    name: 'Premium Fish Grooming Pack 11',
+    shortName: 'Fish grooming 11',
+    category: 'grooming',
+    subcategory: 'General',
+    petType: 'Fish',
+    brand: 'PetCare Co.',
+    price: 1216,
+    mrp: 1372,
+    discountPercent: 11,
+    rating: 3.9,
+    reviewsCount: 690,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 35,
+    storeId: 'store-4',
+    storeName: 'Apollo Pet Pharmacy & Health',
+    storeDistance: '0.6 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 1216, mrp: 1372, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 29,
+    description: 'High quality Fish grooming product for everyday use.'
+  }
+  , {
+    id: 'prod-10012',
+    name: 'Premium Dog Food Pack 12',
+    shortName: 'Dog food 12',
+    category: 'food',
+    subcategory: 'General',
+    petType: 'Dog',
+    brand: 'PetCare Co.',
+    price: 969,
+    mrp: 1389,
+    discountPercent: 30,
+    rating: 4.7,
+    reviewsCount: 569,
+    isTopPick: true,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 35,
+    storeId: 'store-1',
+    storeName: 'Paws & Whiskers Supermart',
+    storeDistance: '1.1 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 969, mrp: 1389, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 35,
+    description: 'High quality Dog food product for everyday use.'
+  }
+  , {
+    id: 'prod-10013',
+    name: 'Premium Cat Accessories Pack 13',
+    shortName: 'Cat accessories 13',
+    category: 'accessories',
+    subcategory: 'General',
+    petType: 'Cat',
+    brand: 'PetCare Co.',
+    price: 1615,
+    mrp: 2015,
+    discountPercent: 20,
+    rating: 3.7,
+    reviewsCount: 682,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 18,
+    storeId: 'store-2',
+    storeName: 'Canine Castle Pet Hub',
+    storeDistance: '4.9 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 1615, mrp: 2015, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 14,
+    description: 'High quality Cat accessories product for everyday use.'
+  }
+  , {
+    id: 'prod-10014',
+    name: 'Premium Bird Medicine Pack 14',
+    shortName: 'Bird medicine 14',
+    category: 'medicine',
+    subcategory: 'General',
+    petType: 'Bird',
+    brand: 'PetCare Co.',
+    price: 215,
+    mrp: 648,
+    discountPercent: 67,
+    rating: 4.3,
+    reviewsCount: 236,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 37,
+    storeId: 'store-3',
+    storeName: 'Pet Paradise Express',
+    storeDistance: '2.4 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 215, mrp: 648, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 8,
+    description: 'High quality Bird medicine product for everyday use.'
+  }
+  , {
+    id: 'prod-10015',
+    name: 'Premium Fish Grooming Pack 15',
+    shortName: 'Fish grooming 15',
+    category: 'grooming',
+    subcategory: 'General',
+    petType: 'Fish',
+    brand: 'PetCare Co.',
+    price: 1622,
+    mrp: 1723,
+    discountPercent: 6,
+    rating: 4.6,
+    reviewsCount: 38,
+    isTopPick: true,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 31,
+    storeId: 'store-4',
+    storeName: 'Apollo Pet Pharmacy & Health',
+    storeDistance: '1.2 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 1622, mrp: 1723, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 22,
+    description: 'High quality Fish grooming product for everyday use.'
+  }
+  , {
+    id: 'prod-10016',
+    name: 'Premium Dog Food Pack 16',
+    shortName: 'Dog food 16',
+    category: 'food',
+    subcategory: 'General',
+    petType: 'Dog',
+    brand: 'PetCare Co.',
+    price: 620,
+    mrp: 719,
+    discountPercent: 14,
+    rating: 3.0,
+    reviewsCount: 772,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 37,
+    storeId: 'store-1',
+    storeName: 'Paws & Whiskers Supermart',
+    storeDistance: '2.8 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 620, mrp: 719, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 1,
+    description: 'High quality Dog food product for everyday use.'
+  }
+  , {
+    id: 'prod-10017',
+    name: 'Premium Cat Accessories Pack 17',
+    shortName: 'Cat accessories 17',
+    category: 'accessories',
+    subcategory: 'General',
+    petType: 'Cat',
+    brand: 'PetCare Co.',
+    price: 1742,
+    mrp: 1844,
+    discountPercent: 6,
+    rating: 3.8,
+    reviewsCount: 377,
+    isTopPick: true,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 35,
+    storeId: 'store-2',
+    storeName: 'Canine Castle Pet Hub',
+    storeDistance: '2.6 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 1742, mrp: 1844, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 22,
+    description: 'High quality Cat accessories product for everyday use.'
+  }
+  , {
+    id: 'prod-10018',
+    name: 'Premium Bird Medicine Pack 18',
+    shortName: 'Bird medicine 18',
+    category: 'medicine',
+    subcategory: 'General',
+    petType: 'Bird',
+    brand: 'PetCare Co.',
+    price: 1756,
+    mrp: 2071,
+    discountPercent: 15,
+    rating: 4.6,
+    reviewsCount: 285,
+    isTopPick: true,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 29,
+    storeId: 'store-3',
+    storeName: 'Pet Paradise Express',
+    storeDistance: '0.9 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 1756, mrp: 2071, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 32,
+    description: 'High quality Bird medicine product for everyday use.'
+  }
+  , {
+    id: 'prod-10019',
+    name: 'Premium Fish Grooming Pack 19',
+    shortName: 'Fish grooming 19',
+    category: 'grooming',
+    subcategory: 'General',
+    petType: 'Fish',
+    brand: 'PetCare Co.',
+    price: 492,
+    mrp: 903,
+    discountPercent: 46,
+    rating: 3.4,
+    reviewsCount: 756,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 36,
+    storeId: 'store-4',
+    storeName: 'Apollo Pet Pharmacy & Health',
+    storeDistance: '2.3 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 492, mrp: 903, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 49,
+    description: 'High quality Fish grooming product for everyday use.'
+  }
+  , {
+    id: 'prod-10020',
+    name: 'Premium Dog Food Pack 20',
+    shortName: 'Dog food 20',
+    category: 'food',
+    subcategory: 'General',
+    petType: 'Dog',
+    brand: 'PetCare Co.',
+    price: 799,
+    mrp: 1200,
+    discountPercent: 33,
+    rating: 4.5,
+    reviewsCount: 585,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 18,
+    storeId: 'store-1',
+    storeName: 'Paws & Whiskers Supermart',
+    storeDistance: '2.0 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 799, mrp: 1200, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 42,
+    description: 'High quality Dog food product for everyday use.'
+  }
+  , {
+    id: 'prod-10021',
+    name: 'Premium Cat Accessories Pack 21',
+    shortName: 'Cat accessories 21',
+    category: 'accessories',
+    subcategory: 'General',
+    petType: 'Cat',
+    brand: 'PetCare Co.',
+    price: 1814,
+    mrp: 2183,
+    discountPercent: 17,
+    rating: 4.8,
+    reviewsCount: 513,
+    isTopPick: true,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 25,
+    storeId: 'store-2',
+    storeName: 'Canine Castle Pet Hub',
+    storeDistance: '5.4 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 1814, mrp: 2183, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 48,
+    description: 'High quality Cat accessories product for everyday use.'
+  }
+  , {
+    id: 'prod-10022',
+    name: 'Premium Bird Medicine Pack 22',
+    shortName: 'Bird medicine 22',
+    category: 'medicine',
+    subcategory: 'General',
+    petType: 'Bird',
+    brand: 'PetCare Co.',
+    price: 335,
+    mrp: 632,
+    discountPercent: 47,
+    rating: 4.7,
+    reviewsCount: 228,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 19,
+    storeId: 'store-3',
+    storeName: 'Pet Paradise Express',
+    storeDistance: '3.1 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 335, mrp: 632, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 40,
+    description: 'High quality Bird medicine product for everyday use.'
+  }
+  , {
+    id: 'prod-10023',
+    name: 'Premium Fish Grooming Pack 23',
+    shortName: 'Fish grooming 23',
+    category: 'grooming',
+    subcategory: 'General',
+    petType: 'Fish',
+    brand: 'PetCare Co.',
+    price: 626,
+    mrp: 910,
+    discountPercent: 31,
+    rating: 4.4,
+    reviewsCount: 547,
+    isTopPick: true,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 24,
+    storeId: 'store-4',
+    storeName: 'Apollo Pet Pharmacy & Health',
+    storeDistance: '2.9 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 626, mrp: 910, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 5,
+    description: 'High quality Fish grooming product for everyday use.'
+  }
+  , {
+    id: 'prod-10024',
+    name: 'Premium Dog Food Pack 24',
+    shortName: 'Dog food 24',
+    category: 'food',
+    subcategory: 'General',
+    petType: 'Dog',
+    brand: 'PetCare Co.',
+    price: 2070,
+    mrp: 2462,
+    discountPercent: 16,
+    rating: 3.6,
+    reviewsCount: 796,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 26,
+    storeId: 'store-1',
+    storeName: 'Paws & Whiskers Supermart',
+    storeDistance: '3.4 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 2070, mrp: 2462, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 9,
+    description: 'High quality Dog food product for everyday use.'
+  }
+  , {
+    id: 'prod-10025',
+    name: 'Premium Cat Accessories Pack 25',
+    shortName: 'Cat accessories 25',
+    category: 'accessories',
+    subcategory: 'General',
+    petType: 'Cat',
+    brand: 'PetCare Co.',
+    price: 1122,
+    mrp: 1354,
+    discountPercent: 17,
+    rating: 3.9,
+    reviewsCount: 260,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 19,
+    storeId: 'store-2',
+    storeName: 'Canine Castle Pet Hub',
+    storeDistance: '1.8 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 1122, mrp: 1354, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 28,
+    description: 'High quality Cat accessories product for everyday use.'
+  }
+  , {
+    id: 'prod-10026',
+    name: 'Premium Bird Medicine Pack 26',
+    shortName: 'Bird medicine 26',
+    category: 'medicine',
+    subcategory: 'General',
+    petType: 'Bird',
+    brand: 'PetCare Co.',
+    price: 1267,
+    mrp: 1590,
+    discountPercent: 20,
+    rating: 4.1,
+    reviewsCount: 312,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 21,
+    storeId: 'store-3',
+    storeName: 'Pet Paradise Express',
+    storeDistance: '4.8 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 1267, mrp: 1590, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 25,
+    description: 'High quality Bird medicine product for everyday use.'
+  }
+  , {
+    id: 'prod-10027',
+    name: 'Premium Fish Grooming Pack 27',
+    shortName: 'Fish grooming 27',
+    category: 'grooming',
+    subcategory: 'General',
+    petType: 'Fish',
+    brand: 'PetCare Co.',
+    price: 566,
+    mrp: 668,
+    discountPercent: 15,
+    rating: 3.4,
+    reviewsCount: 139,
+    isTopPick: true,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 17,
+    storeId: 'store-4',
+    storeName: 'Apollo Pet Pharmacy & Health',
+    storeDistance: '5.3 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 566, mrp: 668, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 31,
+    description: 'High quality Fish grooming product for everyday use.'
+  }
+  , {
+    id: 'prod-10028',
+    name: 'Premium Dog Food Pack 28',
+    shortName: 'Dog food 28',
+    category: 'food',
+    subcategory: 'General',
+    petType: 'Dog',
+    brand: 'PetCare Co.',
+    price: 1237,
+    mrp: 1603,
+    discountPercent: 23,
+    rating: 4.0,
+    reviewsCount: 60,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 15,
+    storeId: 'store-1',
+    storeName: 'Paws & Whiskers Supermart',
+    storeDistance: '2.2 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 1237, mrp: 1603, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 46,
+    description: 'High quality Dog food product for everyday use.'
+  }
+  , {
+    id: 'prod-10029',
+    name: 'Premium Cat Accessories Pack 29',
+    shortName: 'Cat accessories 29',
+    category: 'accessories',
+    subcategory: 'General',
+    petType: 'Cat',
+    brand: 'PetCare Co.',
+    price: 265,
+    mrp: 652,
+    discountPercent: 59,
+    rating: 3.7,
+    reviewsCount: 582,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 31,
+    storeId: 'store-2',
+    storeName: 'Canine Castle Pet Hub',
+    storeDistance: '2.8 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 265, mrp: 652, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 39,
+    description: 'High quality Cat accessories product for everyday use.'
+  }
+  , {
+    id: 'prod-10030',
+    name: 'Premium Bird Medicine Pack 30',
+    shortName: 'Bird medicine 30',
+    category: 'medicine',
+    subcategory: 'General',
+    petType: 'Bird',
+    brand: 'PetCare Co.',
+    price: 1439,
+    mrp: 1958,
+    discountPercent: 27,
+    rating: 3.5,
+    reviewsCount: 144,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 18,
+    storeId: 'store-3',
+    storeName: 'Pet Paradise Express',
+    storeDistance: '0.6 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 1439, mrp: 1958, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 7,
+    description: 'High quality Bird medicine product for everyday use.'
+  }
+  , {
+    id: 'prod-10031',
+    name: 'Premium Fish Grooming Pack 31',
+    shortName: 'Fish grooming 31',
+    category: 'grooming',
+    subcategory: 'General',
+    petType: 'Fish',
+    brand: 'PetCare Co.',
+    price: 839,
+    mrp: 1388,
+    discountPercent: 40,
+    rating: 4.3,
+    reviewsCount: 392,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 33,
+    storeId: 'store-4',
+    storeName: 'Apollo Pet Pharmacy & Health',
+    storeDistance: '2.5 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 839, mrp: 1388, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 39,
+    description: 'High quality Fish grooming product for everyday use.'
+  }
+  , {
+    id: 'prod-10032',
+    name: 'Premium Dog Food Pack 32',
+    shortName: 'Dog food 32',
+    category: 'food',
+    subcategory: 'General',
+    petType: 'Dog',
+    brand: 'PetCare Co.',
+    price: 1878,
+    mrp: 2147,
+    discountPercent: 13,
+    rating: 4.2,
+    reviewsCount: 956,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 11,
+    storeId: 'store-1',
+    storeName: 'Paws & Whiskers Supermart',
+    storeDistance: '3.6 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 1878, mrp: 2147, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 28,
+    description: 'High quality Dog food product for everyday use.'
+  }
+  , {
+    id: 'prod-10033',
+    name: 'Premium Cat Accessories Pack 33',
+    shortName: 'Cat accessories 33',
+    category: 'accessories',
+    subcategory: 'General',
+    petType: 'Cat',
+    brand: 'PetCare Co.',
+    price: 844,
+    mrp: 1244,
+    discountPercent: 32,
+    rating: 4.0,
+    reviewsCount: 420,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 15,
+    storeId: 'store-2',
+    storeName: 'Canine Castle Pet Hub',
+    storeDistance: '2.4 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 844, mrp: 1244, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 21,
+    description: 'High quality Cat accessories product for everyday use.'
+  }
+  , {
+    id: 'prod-10034',
+    name: 'Premium Bird Medicine Pack 34',
+    shortName: 'Bird medicine 34',
+    category: 'medicine',
+    subcategory: 'General',
+    petType: 'Bird',
+    brand: 'PetCare Co.',
+    price: 1257,
+    mrp: 1437,
+    discountPercent: 13,
+    rating: 3.2,
+    reviewsCount: 497,
+    isTopPick: true,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 32,
+    storeId: 'store-3',
+    storeName: 'Pet Paradise Express',
+    storeDistance: '5.4 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 1257, mrp: 1437, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 37,
+    description: 'High quality Bird medicine product for everyday use.'
+  }
+  , {
+    id: 'prod-10035',
+    name: 'Premium Fish Grooming Pack 35',
+    shortName: 'Fish grooming 35',
+    category: 'grooming',
+    subcategory: 'General',
+    petType: 'Fish',
+    brand: 'PetCare Co.',
+    price: 613,
+    mrp: 859,
+    discountPercent: 29,
+    rating: 4.0,
+    reviewsCount: 71,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 34,
+    storeId: 'store-4',
+    storeName: 'Apollo Pet Pharmacy & Health',
+    storeDistance: '3.6 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 613, mrp: 859, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 22,
+    description: 'High quality Fish grooming product for everyday use.'
+  }
+  , {
+    id: 'prod-10036',
+    name: 'Premium Dog Food Pack 36',
+    shortName: 'Dog food 36',
+    category: 'food',
+    subcategory: 'General',
+    petType: 'Dog',
+    brand: 'PetCare Co.',
+    price: 933,
+    mrp: 1447,
+    discountPercent: 36,
+    rating: 4.2,
+    reviewsCount: 717,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 34,
+    storeId: 'store-1',
+    storeName: 'Paws & Whiskers Supermart',
+    storeDistance: '1.0 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 933, mrp: 1447, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 26,
+    description: 'High quality Dog food product for everyday use.'
+  }
+  , {
+    id: 'prod-10037',
+    name: 'Premium Cat Accessories Pack 37',
+    shortName: 'Cat accessories 37',
+    category: 'accessories',
+    subcategory: 'General',
+    petType: 'Cat',
+    brand: 'PetCare Co.',
+    price: 700,
+    mrp: 841,
+    discountPercent: 17,
+    rating: 3.4,
+    reviewsCount: 333,
+    isTopPick: true,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 17,
+    storeId: 'store-2',
+    storeName: 'Canine Castle Pet Hub',
+    storeDistance: '4.4 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 700, mrp: 841, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 14,
+    description: 'High quality Cat accessories product for everyday use.'
+  }
+  , {
+    id: 'prod-10038',
+    name: 'Premium Bird Medicine Pack 38',
+    shortName: 'Bird medicine 38',
+    category: 'medicine',
+    subcategory: 'General',
+    petType: 'Bird',
+    brand: 'PetCare Co.',
+    price: 1617,
+    mrp: 1880,
+    discountPercent: 14,
+    rating: 3.9,
+    reviewsCount: 683,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 31,
+    storeId: 'store-3',
+    storeName: 'Pet Paradise Express',
+    storeDistance: '3.8 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 1617, mrp: 1880, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 47,
+    description: 'High quality Bird medicine product for everyday use.'
+  }
+  , {
+    id: 'prod-10039',
+    name: 'Premium Fish Grooming Pack 39',
+    shortName: 'Fish grooming 39',
+    category: 'grooming',
+    subcategory: 'General',
+    petType: 'Fish',
+    brand: 'PetCare Co.',
+    price: 1339,
+    mrp: 1707,
+    discountPercent: 22,
+    rating: 4.3,
+    reviewsCount: 69,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 27,
+    storeId: 'store-4',
+    storeName: 'Apollo Pet Pharmacy & Health',
+    storeDistance: '1.7 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 1339, mrp: 1707, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 7,
+    description: 'High quality Fish grooming product for everyday use.'
+  }
+  , {
+    id: 'prod-10040',
+    name: 'Premium Dog Food Pack 40',
+    shortName: 'Dog food 40',
+    category: 'food',
+    subcategory: 'General',
+    petType: 'Dog',
+    brand: 'PetCare Co.',
+    price: 324,
+    mrp: 711,
+    discountPercent: 54,
+    rating: 3.6,
+    reviewsCount: 701,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 17,
+    storeId: 'store-1',
+    storeName: 'Paws & Whiskers Supermart',
+    storeDistance: '4.5 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 324, mrp: 711, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 19,
+    description: 'High quality Dog food product for everyday use.'
+  }
+  , {
+    id: 'prod-10041',
+    name: 'Premium Cat Accessories Pack 41',
+    shortName: 'Cat accessories 41',
+    category: 'accessories',
+    subcategory: 'General',
+    petType: 'Cat',
+    brand: 'PetCare Co.',
+    price: 374,
+    mrp: 634,
+    discountPercent: 41,
+    rating: 3.7,
+    reviewsCount: 347,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 39,
+    storeId: 'store-2',
+    storeName: 'Canine Castle Pet Hub',
+    storeDistance: '4.9 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 374, mrp: 634, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 9,
+    description: 'High quality Cat accessories product for everyday use.'
+  }
+  , {
+    id: 'prod-10042',
+    name: 'Premium Bird Medicine Pack 42',
+    shortName: 'Bird medicine 42',
+    category: 'medicine',
+    subcategory: 'General',
+    petType: 'Bird',
+    brand: 'PetCare Co.',
+    price: 431,
+    mrp: 779,
+    discountPercent: 45,
+    rating: 3.1,
+    reviewsCount: 374,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 30,
+    storeId: 'store-3',
+    storeName: 'Pet Paradise Express',
+    storeDistance: '2.4 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 431, mrp: 779, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 31,
+    description: 'High quality Bird medicine product for everyday use.'
+  }
+  , {
+    id: 'prod-10043',
+    name: 'Premium Fish Grooming Pack 43',
+    shortName: 'Fish grooming 43',
+    category: 'grooming',
+    subcategory: 'General',
+    petType: 'Fish',
+    brand: 'PetCare Co.',
+    price: 330,
+    mrp: 642,
+    discountPercent: 49,
+    rating: 3.5,
+    reviewsCount: 184,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 35,
+    storeId: 'store-4',
+    storeName: 'Apollo Pet Pharmacy & Health',
+    storeDistance: '3.5 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 330, mrp: 642, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 23,
+    description: 'High quality Fish grooming product for everyday use.'
+  }
+  , {
+    id: 'prod-10044',
+    name: 'Premium Dog Food Pack 44',
+    shortName: 'Dog food 44',
+    category: 'food',
+    subcategory: 'General',
+    petType: 'Dog',
+    brand: 'PetCare Co.',
+    price: 1365,
+    mrp: 1461,
+    discountPercent: 7,
+    rating: 4.0,
+    reviewsCount: 683,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 28,
+    storeId: 'store-1',
+    storeName: 'Paws & Whiskers Supermart',
+    storeDistance: '0.6 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 1365, mrp: 1461, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 44,
+    description: 'High quality Dog food product for everyday use.'
+  }
+  , {
+    id: 'prod-10045',
+    name: 'Premium Cat Accessories Pack 45',
+    shortName: 'Cat accessories 45',
+    category: 'accessories',
+    subcategory: 'General',
+    petType: 'Cat',
+    brand: 'PetCare Co.',
+    price: 1931,
+    mrp: 2472,
+    discountPercent: 22,
+    rating: 3.2,
+    reviewsCount: 100,
+    isTopPick: true,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 36,
+    storeId: 'store-2',
+    storeName: 'Canine Castle Pet Hub',
+    storeDistance: '3.3 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 1931, mrp: 2472, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 45,
+    description: 'High quality Cat accessories product for everyday use.'
+  }
+  , {
+    id: 'prod-10046',
+    name: 'Premium Bird Medicine Pack 46',
+    shortName: 'Bird medicine 46',
+    category: 'medicine',
+    subcategory: 'General',
+    petType: 'Bird',
+    brand: 'PetCare Co.',
+    price: 789,
+    mrp: 1243,
+    discountPercent: 37,
+    rating: 3.6,
+    reviewsCount: 80,
+    isTopPick: true,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 23,
+    storeId: 'store-3',
+    storeName: 'Pet Paradise Express',
+    storeDistance: '3.6 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 789, mrp: 1243, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 16,
+    description: 'High quality Bird medicine product for everyday use.'
+  }
+  , {
+    id: 'prod-10047',
+    name: 'Premium Fish Grooming Pack 47',
+    shortName: 'Fish grooming 47',
+    category: 'grooming',
+    subcategory: 'General',
+    petType: 'Fish',
+    brand: 'PetCare Co.',
+    price: 1226,
+    mrp: 1367,
+    discountPercent: 10,
+    rating: 4.8,
+    reviewsCount: 955,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 36,
+    storeId: 'store-4',
+    storeName: 'Apollo Pet Pharmacy & Health',
+    storeDistance: '1.6 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 1226, mrp: 1367, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 49,
+    description: 'High quality Fish grooming product for everyday use.'
+  }
+  , {
+    id: 'prod-10048',
+    name: 'Premium Dog Food Pack 48',
+    shortName: 'Dog food 48',
+    category: 'food',
+    subcategory: 'General',
+    petType: 'Dog',
+    brand: 'PetCare Co.',
+    price: 2070,
+    mrp: 2558,
+    discountPercent: 19,
+    rating: 3.5,
+    reviewsCount: 938,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 13,
+    storeId: 'store-1',
+    storeName: 'Paws & Whiskers Supermart',
+    storeDistance: '3.8 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 2070, mrp: 2558, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 8,
+    description: 'High quality Dog food product for everyday use.'
+  }
+  , {
+    id: 'prod-10049',
+    name: 'Premium Cat Accessories Pack 49',
+    shortName: 'Cat accessories 49',
+    category: 'accessories',
+    subcategory: 'General',
+    petType: 'Cat',
+    brand: 'PetCare Co.',
+    price: 1661,
+    mrp: 1722,
+    discountPercent: 4,
+    rating: 4.0,
+    reviewsCount: 597,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 15,
+    storeId: 'store-2',
+    storeName: 'Canine Castle Pet Hub',
+    storeDistance: '4.0 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 1661, mrp: 1722, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 48,
+    description: 'High quality Cat accessories product for everyday use.'
+  }
+  , {
+    id: 'prod-10050',
+    name: 'Premium Bird Medicine Pack 50',
+    shortName: 'Bird medicine 50',
+    category: 'medicine',
+    subcategory: 'General',
+    petType: 'Bird',
+    brand: 'PetCare Co.',
+    price: 278,
+    mrp: 800,
+    discountPercent: 65,
+    rating: 3.7,
+    reviewsCount: 963,
+    isTopPick: false,
+    isInstantDelivery: true,
+    deliveryTimeMinutes: 39,
+    storeId: 'store-3',
+    storeName: 'Pet Paradise Express',
+    storeDistance: '1.2 km',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80'
+    ],
+    sizes: [
+      { size: 'Standard', price: 278, mrp: 800, isDefault: true }
+    ],
+    selectedSize: 'Standard',
+    inStock: true,
+    stockCount: 37,
+    description: 'High quality Bird medicine product for everyday use.'
+  }
 ];

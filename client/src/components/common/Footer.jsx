@@ -61,7 +61,9 @@ export default function Footer() {
           
           {/* Brand info */}
           <div className="md:col-span-2 space-y-4">
-            <Logo size="lg" className="text-white" />
+            <div className="bg-white inline-block px-3 py-1.5 rounded-2xl shadow-sm mb-2">
+              <Logo size="lg" />
+            </div>
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
               The Paw Street (PAW NEAR) is India's leading multi-vendor pet ecommerce & services platform. Connecting pet parents with nearby trusted pet stores, groomers, clinics, and boarding centers with lightning-fast delivery.
             </p>

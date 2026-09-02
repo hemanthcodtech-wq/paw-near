@@ -42,7 +42,7 @@ export default function ScrollToTop() {
       {showScrollTopBtn && (
         <button
           onClick={scrollToTopSmooth}
-          className="fixed bottom-20 md:bottom-8 right-4 md:right-8 z-40 p-3 bg-slate-900/90 hover:bg-slate-900 text-white rounded-full shadow-xl border border-slate-700/50 hover:border-amber-400 hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center group focus:outline-none"
+          className="fixed bottom-36 md:bottom-24 right-4 sm:right-6 z-40 p-3 bg-slate-900/90 hover:bg-slate-900 text-white rounded-full shadow-xl border border-slate-700/50 hover:border-amber-400 hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center group focus:outline-none"
           title="Back to top"
           aria-label="Scroll back to top"
         >

@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Star, Heart, Plus, Minus, ShoppingBag, Zap } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
+import { Star, Heart, Plus, Minus, ShoppingBag, Zap, ShieldCheck } from 'lucide-react';
 import { useCart } from '../../context/CartContext';
 
 export default function ProductCard({ product, layout = 'grid' }) {
+  const navigate = useNavigate();
   const { items, addToCart, updateQuantity, toggleWishlist, isWishlisted } = useCart();
 
   const wishlisted = isWishlisted(product.id);
@@ -16,6 +17,130 @@ export default function ProductCard({ product, layout = 'grid' }) {
   const displayPrice = product.sizes ? (product.sizes.find(s => s.isDefault)?.price || product.price) : product.price;
   const displayMrp = product.sizes ? (product.sizes.find(s => s.isDefault)?.mrp || product.mrp) : product.mrp;
 
+  if (layout === 'deal') {
+    const discount = displayMrp > displayPrice ? Math.round(((displayMrp - displayPrice) / displayMrp) * 100) : 0;
+    return (
+      <div className="group flex flex-col gap-2 sm:gap-3 relative">
+        {/* Image Container with Border and Heart */}
+        <div className="relative aspect-square rounded-2xl sm:rounded-[20px] border border-slate-200 overflow-hidden bg-white p-2 sm:p-4 flex items-center justify-center group-hover:border-amber-300 transition-colors">
+          <Link to={`/product/${product.id}`} className="w-full h-full flex items-center justify-center">
+            <img
+              src={product.image}
+              alt={product.name}
+              className="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-300"
+            />
+          </Link>
+          {/* Wishlist Button */}
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              toggleWishlist(product.id);
+            }}
+            className="absolute top-1.5 right-1.5 sm:top-2 sm:right-2 w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white shadow-xs border border-slate-100 flex items-center justify-center text-slate-400 hover:text-rose-500 transition-all active:scale-90 z-10"
+            title={wishlisted ? 'Remove from Wishlist' : 'Add to Wishlist'}
+          >
+            <Heart className={`w-3.5 h-3.5 sm:w-4 sm:h-4 transition-colors ${wishlisted ? 'text-rose-500 fill-rose-500' : ''}`} />
+          </button>
+        </div>
+
+        {/* Details */}
+        <Link to={`/product/${product.id}`} className="flex flex-col px-0.5">
+          <h4 className="font-bold text-slate-900 text-[11px] sm:text-sm line-clamp-1 leading-snug">
+            {product.name}
+          </h4>
+          <div className="mt-0.5 sm:mt-1 font-black text-slate-900 text-xs sm:text-base">
+            ₹{displayPrice}
+          </div>
+          {discount > 0 ? (
+            <div className="text-[10px] sm:text-xs font-black text-[#F26E21] mt-0.5 tracking-wide">
+              {discount}% OFF
+            </div>
+          ) : (
+            <div className="text-[10px] sm:text-xs font-black text-transparent mt-0.5">
+              0% OFF
+            </div>
+          )}
+        </Link>
+      </div>
+    );
+  }
+
+  if (layout === 'horizontal') {
+    return (
+      <div className="group flex bg-white rounded-2xl border border-slate-200 p-2.5 sm:p-3 hover:border-amber-300 transition-colors w-[280px] sm:w-[320px] shrink-0 h-[140px]">
+        {/* Left Image */}
+        <div className="relative w-[100px] sm:w-[110px] h-full bg-slate-50 rounded-xl overflow-hidden flex items-center justify-center p-2 shrink-0">
+          <Link to={`/product/${product.id}`} className="w-full h-full flex items-center justify-center">
+            <img
+              src={product.image}
+              alt={product.name}
+              className="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-300 drop-shadow-sm"
+            />
+          </Link>
+        </div>
+        
+        {/* Right Content */}
+        <div className="flex-1 flex flex-col justify-between pl-3 py-0.5 min-w-0">
+          <Link to={`/product/${product.id}`}>
+            <h4 className="font-bold text-slate-900 text-[13px] sm:text-sm leading-tight line-clamp-2">
+              {product.name}
+            </h4>
+          </Link>
+          
+          <div className="flex flex-col gap-0.5 mt-1.5">
+            <div className="flex items-center gap-1 text-[11px] text-slate-500">
+              <span className="truncate">{product.brand || 'Pets Villa'}</span>
+              <ShieldCheck className="w-3.5 h-3.5 text-emerald-500 fill-emerald-100 shrink-0" />
+            </div>
+            
+            <div className="flex items-center gap-2 mt-0.5">
+              <div className="flex items-center gap-1 text-[11px] text-slate-600 font-medium shrink-0">
+                <Star className="w-3 h-3 text-[#FFB703] fill-[#FFB703]" />
+                <span>{product.rating}</span>
+                <span className="text-[10px] text-slate-400">({product.reviewsCount > 999 ? '1.2k' : product.reviewsCount})</span>
+              </div>
+            </div>
+            <div className="flex items-center gap-1 text-[11px] text-slate-600 font-medium">
+              <Zap className="w-3 h-3 text-emerald-500 fill-emerald-500" />
+              <span>15 mins</span>
+            </div>
+          </div>
+          
+          <div className="flex items-center justify-between mt-auto pt-1">
+            <span className="font-black text-slate-900 text-sm sm:text-base">
+              ₹{displayPrice}
+            </span>
+            {inCartQty > 0 ? (
+              <div className="flex items-center justify-between bg-[#FFB703] text-slate-950 font-black rounded-lg overflow-hidden px-1.5 py-1 text-xs">
+                <button
+                  onClick={() => updateQuantity(product.id, defaultSize, -1)}
+                  className="p-1 hover:scale-110 active:scale-95 transition-transform"
+                >
+                  <Minus className="w-3 h-3 stroke-[3]" />
+                </button>
+                <span className="px-2">{inCartQty}</span>
+                <button
+                  onClick={() => updateQuantity(product.id, defaultSize, 1)}
+                  className="p-1 hover:scale-110 active:scale-95 transition-transform"
+                >
+                  <Plus className="w-3 h-3 stroke-[3]" />
+                </button>
+              </div>
+            ) : (
+              <button
+                onClick={() => addToCart({ ...product, selectedSize: defaultSize })}
+                className="bg-[#FFB703] hover:bg-[#E5A015] text-slate-900 font-bold text-[11px] px-4 py-1.5 rounded-lg transition-colors active:scale-95 shadow-sm ml-auto"
+              >
+                ADD
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="group bg-white rounded-3xl border border-slate-200/80 hover:border-amber-300 hover:shadow-md transition-all duration-300 flex flex-col justify-between overflow-hidden relative p-3.5 sm:p-4">
       
@@ -24,7 +149,7 @@ export default function ProductCard({ product, layout = 'grid' }) {
         
         {/* Instant delivery pill */}
         {product.isInstantDelivery && (
-          <div className="absolute top-1 left-1 z-10 bg-[#F59E0B] text-white text-[10px] sm:text-[11px] font-black px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-xs">
+          <div className="absolute top-1 left-1 z-10 bg-[#F59E0B] text-white text-[9px] sm:text-[11px] font-black px-1.5 sm:px-2.5 py-0.5 rounded-full flex items-center gap-0.5 sm:gap-1 shadow-xs">
             <Zap className="w-2.5 h-2.5 fill-white" />
             <span>{product.deliveryTimeMinutes || 15}m</span>
           </div>
@@ -37,10 +162,10 @@ export default function ProductCard({ product, layout = 'grid' }) {
             e.stopPropagation();
             toggleWishlist(product.id);
           }}
-          className="absolute top-1 right-1 z-10 w-8 h-8 rounded-full bg-white shadow-xs border border-slate-100 flex items-center justify-center text-slate-400 hover:text-rose-500 transition-all active:scale-90"
+          className="absolute top-1 right-1 z-10 w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white shadow-xs border border-slate-100 flex items-center justify-center text-slate-400 hover:text-rose-500 transition-all active:scale-90"
           title={wishlisted ? 'Remove from Wishlist' : 'Add to Wishlist'}
         >
-          <Heart className={`w-4 h-4 transition-colors ${wishlisted ? 'text-rose-500 fill-rose-500' : ''}`} />
+          <Heart className={`w-3.5 h-3.5 sm:w-4 sm:h-4 transition-colors ${wishlisted ? 'text-rose-500 fill-rose-500' : ''}`} />
         </button>
 
         {/* Product Image Link */}
@@ -58,9 +183,9 @@ export default function ProductCard({ product, layout = 'grid' }) {
       <div className="flex-1 flex flex-col justify-between pt-2.5">
         <div>
           {/* Brand & Distance */}
-          <div className="flex items-center justify-between text-[11px] text-slate-400 mb-1">
-            <span className="font-bold uppercase tracking-wider text-slate-500">{product.brand}</span>
-            <span className="text-[11px] text-slate-400 font-medium">{product.storeDistance || '0.8 km'}</span>
+          <div className="flex items-center justify-between gap-1 text-[9px] sm:text-[11px] text-slate-400 mb-1">
+            <span className="font-bold uppercase tracking-wider text-slate-500 truncate">{product.brand}</span>
+            <span className="font-medium shrink-0">{product.storeDistance || '0.8 km'}</span>
           </div>
 
           {/* Title */}
@@ -84,9 +209,9 @@ export default function ProductCard({ product, layout = 'grid' }) {
         </div>
 
         {/* Quick Add CTA Bar with Full Pill Rounded Stepper matching screenshot */}
-        <div className="mt-3">
+        <div className="mt-3 flex items-center gap-2">
           {inCartQty > 0 ? (
-            <div className="flex items-center justify-between bg-[#E5A015] hover:bg-[#D49010] text-slate-950 font-black rounded-full overflow-hidden shadow-xs px-4 py-1.5 text-xs sm:text-sm transition-colors">
+            <div className="flex-1 flex items-center justify-between bg-[#E5A015] hover:bg-[#D49010] text-slate-950 font-black rounded-full overflow-hidden shadow-xs px-2 py-1.5 text-xs sm:text-sm transition-colors">
               <button
                 onClick={() => updateQuantity(product.id, cartItem.selectedSize, -1)}
                 className="p-0.5 hover:scale-125 active:scale-90 transition-transform font-black"
@@ -106,12 +231,24 @@ export default function ProductCard({ product, layout = 'grid' }) {
           ) : (
             <button
               onClick={() => addToCart(product, defaultSize, 1)}
-              className="w-full py-1.5 bg-amber-50/90 hover:bg-[#E5A015] text-amber-900 hover:text-slate-950 rounded-full text-xs font-bold transition-all duration-200 flex items-center justify-center gap-1 active:scale-95 border border-amber-200 hover:border-[#E5A015] shadow-2xs"
+              className="flex-1 py-1.5 bg-amber-50/90 hover:bg-[#E5A015] text-amber-900 hover:text-slate-950 rounded-full text-xs font-bold transition-all duration-200 flex items-center justify-center gap-1 active:scale-95 border border-amber-200 hover:border-[#E5A015] shadow-2xs"
             >
               <Plus className="w-3.5 h-3.5" />
               <span>Add</span>
             </button>
           )}
+          
+          <button
+            onClick={() => {
+              if (inCartQty === 0) {
+                addToCart(product, defaultSize, 1);
+              }
+              navigate('/checkout');
+            }}
+            className="flex-1 py-1.5 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-bold transition-all duration-200 flex items-center justify-center active:scale-95 shadow-2xs"
+          >
+            Buy Now
+          </button>
         </div>
       </div>
     </div>
