@@ -9,7 +9,12 @@ import {
   HeartHandshake, 
   ShieldCheck,
   Building,
-  Filter
+  Filter,
+  Home,
+  Stethoscope,
+  Clock,
+  Search,
+  CheckCircle2
 } from 'lucide-react';
 import { SALONS, SERVICE_FILTER_PILLS } from '../../data/services';
 import SalonCard from '../../components/service/SalonCard';
@@ -17,83 +22,220 @@ import BookingModal from '../../components/service/BookingModal';
 
 export default function ServicesPage() {
   const [searchParams] = useSearchParams();
-  const initialTab = searchParams.get('tab') || 'all';
+  const initialTab = searchParams.get('tab') || 'grooming';
 
-  const [activePill, setActivePill] = useState(initialTab === 'clinic' ? 'clinic' : initialTab === 'boarding' ? 'boarding' : 'all');
+  // Main Category Tab: 'grooming' | 'clinic' | 'boarding'
+  const [activeCategoryTab, setActiveCategoryTab] = useState(
+    initialTab === 'clinic' ? 'clinic' : initialTab === 'boarding' ? 'boarding' : 'grooming'
+  );
+
+  // Delivery Channel Filter: 'all' | 'home' | 'clinic'
+  const [locationChannelFilter, setLocationChannelFilter] = useState('all');
+
+  // Sub-filter pill
+  const [activeSubPill, setActiveSubPill] = useState('all');
   const [selectedSalon, setSelectedSalon] = useState(null);
 
   const filteredSalons = SALONS.filter(salon => {
-    if (activePill === 'all') return true;
-    if (activePill === 'clinic') return salon.type === 'clinic';
-    if (activePill === 'boarding') return salon.type === 'boarding';
-    // Grooming sub-services
-    if (activePill === 'bath') return salon.services.some(s => s.name.toLowerCase().includes('bath'));
-    if (activePill === 'haircut') return salon.services.some(s => s.name.toLowerCase().includes('cut') || s.name.toLowerCase().includes('grooming'));
-    if (activePill === 'nail') return salon.services.some(s => s.name.toLowerCase().includes('nail'));
-    if (activePill === 'spa') return salon.services.some(s => s.name.toLowerCase().includes('spa'));
-    return true;
+    // 1. Main Category filter
+    let matchesCategory = false;
+    if (activeCategoryTab === 'grooming') matchesCategory = salon.type === 'grooming';
+    else if (activeCategoryTab === 'clinic') matchesCategory = salon.type === 'clinic';
+    else if (activeCategoryTab === 'boarding') matchesCategory = salon.type === 'boarding';
+
+    // 2. Channel mode filter (Home Service vs Clinic Visit)
+    let matchesChannel = true;
+    if (locationChannelFilter === 'home') {
+      matchesChannel = salon.homeServiceEnabled === true;
+    } else if (locationChannelFilter === 'clinic') {
+      matchesChannel = salon.clinicVisitEnabled === true;
+    }
+
+    // 3. Sub-pill filter
+    let matchesSub = true;
+    if (activeSubPill !== 'all') {
+      matchesSub = salon.services.some(s => s.name.toLowerCase().includes(activeSubPill.toLowerCase()));
+    }
+
+    return matchesCategory && matchesChannel && matchesSub;
   });
 
-  const groomingPills = [
-    { id: 'all', label: 'All' },
-    { id: 'bath', label: 'Bath' },
-    { id: 'haircut', label: 'Hair Cut' },
-    { id: 'nail', label: 'Nail Trim' },
-    { id: 'spa', label: 'Spa' }
+  const groomingSubPills = [
+    { id: 'all', label: 'All Grooming' },
+    { id: 'bath', label: 'Bath & Wash' },
+    { id: 'haircut', label: 'Hair Cut & Styling' },
+    { id: 'nail', label: 'Nail Care' },
+    { id: 'spa', label: 'Aromatic Spa' },
+    { id: 'tick', label: 'Anti-Tick Medicated' }
   ];
+
+  const clinicSubPills = [
+    { id: 'all', label: 'All Medical Care' },
+    { id: 'consultation', label: 'Doctor Consultation' },
+    { id: 'vaccination', label: 'Puppy & Adult Vaccine' },
+    { id: 'dental', label: 'Dental Scaling' },
+    { id: 'ultrasound', label: 'Ultrasound & Diagnostics' },
+    { id: 'skin', label: 'Skin & Allergy Exam' }
+  ];
+
+  const currentSubPills = activeCategoryTab === 'clinic' ? clinicSubPills : groomingSubPills;
 
   return (
     <div className="space-y-4 sm:space-y-6 pb-12">
       
-      {/* Title matching screenshot */}
-      <div>
-        <h1 className="font-heading font-black text-slate-900 text-xl sm:text-2xl md:text-3xl">
-          Pet Grooming
-        </h1>
+      {/* Title & Service Category Tabs */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h1 className="font-heading font-black text-slate-900 text-xl sm:text-2xl md:text-3xl">
+            {activeCategoryTab === 'clinic' 
+              ? 'Veterinary & Medical Checkup' 
+              : activeCategoryTab === 'boarding'
+              ? 'Pet Boarding & Daycare'
+              : 'Pet Grooming & Spa'}
+          </h1>
+          <p className="text-xs sm:text-sm text-slate-500 mt-0.5">
+            Book professional at-home doorstep services or schedule in-clinic appointments near you.
+          </p>
+        </div>
+
+        {/* Top Category Tabs */}
+        <div className="flex items-center bg-slate-100 p-1 rounded-2xl border border-slate-200 shrink-0 self-start sm:self-center">
+          <button
+            onClick={() => {
+              setActiveCategoryTab('grooming');
+              setActiveSubPill('all');
+            }}
+            className={`px-3.5 py-1.5 rounded-xl text-xs font-black transition-all flex items-center gap-1.5 ${
+              activeCategoryTab === 'grooming'
+                ? 'bg-white text-slate-900 shadow-xs border border-slate-200/60'
+                : 'text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            <Scissors className="w-3.5 h-3.5 text-amber-500" />
+            <span>Pet Grooming</span>
+          </button>
+
+          <button
+            onClick={() => {
+              setActiveCategoryTab('clinic');
+              setActiveSubPill('all');
+            }}
+            className={`px-3.5 py-1.5 rounded-xl text-xs font-black transition-all flex items-center gap-1.5 ${
+              activeCategoryTab === 'clinic'
+                ? 'bg-white text-slate-900 shadow-xs border border-slate-200/60'
+                : 'text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            <Stethoscope className="w-3.5 h-3.5 text-blue-500" />
+            <span>Vet & Checkup</span>
+          </button>
+
+          <button
+            onClick={() => {
+              setActiveCategoryTab('boarding');
+              setActiveSubPill('all');
+            }}
+            className={`px-3.5 py-1.5 rounded-xl text-xs font-black transition-all flex items-center gap-1.5 ${
+              activeCategoryTab === 'boarding'
+                ? 'bg-white text-slate-900 shadow-xs border border-slate-200/60'
+                : 'text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            <Building className="w-3.5 h-3.5 text-emerald-500" />
+            <span>Boarding</span>
+          </button>
+        </div>
       </div>
 
-      {/* Hero Banner matching screenshot ("Book Grooming at Top-Rated Salons Near You") */}
-      <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-[#FFF5EB] border border-amber-200/70 p-4 sm:p-6 flex items-center justify-between gap-4">
-        <div className="space-y-1.5 z-10 max-w-[65%]">
-          <h2 className="font-heading font-black text-sm sm:text-lg md:text-xl text-slate-900 leading-tight">
-            Book Grooming at <br />
-            Top-Rated Salons Near You
+      {/* Hero Promotional Banner */}
+      <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-r from-amber-100/90 via-orange-50 to-amber-50 border border-amber-200/80 p-5 sm:p-7 flex items-center justify-between gap-4 shadow-xs">
+        <div className="space-y-2 z-10 max-w-[65%]">
+          <span className="bg-amber-400 text-slate-950 font-black text-[10px] px-2.5 py-0.5 rounded-full uppercase tracking-wider inline-block">
+            {activeCategoryTab === 'clinic' ? 'Doctor at Home or Clinic' : 'Doorstep Van or Salon'}
+          </span>
+          <h2 className="font-heading font-black text-base sm:text-xl md:text-2xl text-slate-900 leading-tight">
+            {activeCategoryTab === 'clinic'
+              ? 'Expert Veterinary Doctors & Medical Tests at Your Doorstep or Clinic'
+              : 'Book Pampering Grooming at Top-Rated Salons or in Mobile Vans'}
           </h2>
+          <p className="text-xs text-slate-600 hidden sm:block">
+            Sanitized kits, 100% gentle certified handlers, and stress-free pet care with verified reviews.
+          </p>
         </div>
 
         {/* Hero image banner */}
-        <div className="relative w-28 h-20 sm:w-40 sm:h-28 rounded-xl overflow-hidden shadow-xs shrink-0">
+        <div className="relative w-28 h-24 sm:w-44 sm:h-32 rounded-2xl overflow-hidden shadow-sm shrink-0 border border-white/60">
           <img
-            src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=500&q=80"
-            alt="Dog receiving hair cut"
+            src={
+              activeCategoryTab === 'clinic'
+                ? 'https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=500&q=80'
+                : 'https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=500&q=80'
+            }
+            alt="Pet Care Service"
             className="w-full h-full object-cover"
           />
         </div>
       </div>
 
-      {/* Filter Pills matching screenshot: All, Bath, Hair Cut, Nail Trim, Spa */}
-      <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">
-        {groomingPills.map((pill) => {
-          const isActive = activePill === pill.id;
-          return (
-            <button
-              key={pill.id}
-              onClick={() => setActivePill(pill.id)}
-              className={`px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap transition-all select-none ${
-                isActive
-                  ? 'bg-[#E5A015] text-slate-950 shadow-xs font-black'
-                  : 'bg-slate-100 hover:bg-amber-50 text-slate-700 border border-transparent'
-              }`}
-            >
-              {pill.label}
-            </button>
-          );
-        })}
+      {/* Delivery Mode Toggle (Home Service vs In-Clinic Visit) */}
+      <div className="bg-white p-3 sm:p-4 rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-xs flex flex-wrap items-center justify-between gap-3">
+        
+        {/* Channel selector */}
+        <div className="flex items-center gap-2">
+          <span className="text-xs font-black text-slate-700 uppercase tracking-wider hidden sm:inline">
+            Channel:
+          </span>
+          <div className="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs">
+            {[
+              { id: 'all', label: 'All Options' },
+              { id: 'home', label: '🏡 At-Home Doorstep Only' },
+              { id: 'clinic', label: '🏥 In-Clinic Visit Only' }
+            ].map(channel => (
+              <button
+                key={channel.id}
+                onClick={() => setLocationChannelFilter(channel.id)}
+                className={`px-3 py-1.5 rounded-lg font-bold transition-all ${
+                  locationChannelFilter === channel.id
+                    ? 'bg-[#E5A015] text-slate-950 shadow-xs font-black'
+                    : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                {channel.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Sub-Service Pills */}
+        <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
+          {currentSubPills.map((pill) => {
+            const isActive = activeSubPill === pill.id;
+            return (
+              <button
+                key={pill.id}
+                onClick={() => setActiveSubPill(pill.id)}
+                className={`px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap transition-all select-none ${
+                  isActive
+                    ? 'bg-slate-900 text-white font-black shadow-xs'
+                    : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
+                }`}
+              >
+                {pill.label}
+              </button>
+            );
+          })}
+        </div>
       </div>
 
-      {/* Salons & Clinics List matching screenshot */}
+      {/* Salons & Clinics List */}
       <div className="space-y-3 pt-1">
-        <div className="grid grid-cols-1 gap-3">
+        <div className="flex items-center justify-between px-1">
+          <p className="text-xs text-slate-500 font-medium">
+            Showing <span className="font-bold text-slate-900">{filteredSalons.length}</span> certified pet care centers
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-3.5">
           {filteredSalons.map((salon) => (
             <SalonCard
               key={salon.id}
@@ -101,6 +243,13 @@ export default function ServicesPage() {
               onBook={(s) => setSelectedSalon(s)}
             />
           ))}
+
+          {filteredSalons.length === 0 && (
+            <div className="bg-white rounded-3xl p-12 text-center border border-slate-200/90 text-slate-500 space-y-2">
+              <p className="font-bold text-slate-800 text-sm">No pet care facilities found for this filter.</p>
+              <p className="text-xs">Try selecting 'All Options' or changing the category tab.</p>
+            </div>
+          )}
         </div>
       </div>
 
@@ -115,3 +264,4 @@ export default function ServicesPage() {
     </div>
   );
 }
+

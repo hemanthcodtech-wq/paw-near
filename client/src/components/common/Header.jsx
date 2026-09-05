@@ -57,6 +57,10 @@ export default function Header() {
             <span>Superfast 15-20 Min Pet Supplies Delivery in Hyderabad! 🐾</span>
           </div>
           <div className="hidden md:flex items-center gap-4 text-[11px] font-medium text-amber-100">
+            <Link to="/vendor/login" className="hover:text-white transition-colors bg-white/10 hover:bg-white/20 px-2 py-0.5 rounded-md text-white font-bold flex items-center gap-1">
+              <span>🏪 Vendor Portal</span>
+            </Link>
+            <span>•</span>
             <Link to="/services" className="hover:text-white transition-colors">Book Salon at Home</Link>
             <span>•</span>
             <Link to="/support" className="hover:text-white transition-colors flex items-center gap-1">

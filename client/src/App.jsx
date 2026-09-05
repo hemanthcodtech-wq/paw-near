@@ -1,11 +1,12 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, useLocation } from 'react-router-dom';
 
 // Global Context Providers
 import { AuthProvider } from './context/AuthContext';
 import { LocationProvider } from './context/LocationContext';
 import { CartProvider, useCart } from './context/CartContext';
 import { OrderProvider } from './context/OrderContext';
+import { VendorProvider } from './context/VendorContext';
 
 // Common Layout Components
 import Header from './components/common/Header';
@@ -32,6 +33,50 @@ function GlobalToast() {
   );
 }
 
+// Inner Content with Route Awareness
+function AppContent() {
+  const location = useLocation();
+  const isVendorRoute = location.pathname.startsWith('/vendor');
+
+  if (isVendorRoute) {
+    return (
+      <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-amber-500 selection:text-white">
+        <AppRouter />
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen flex flex-col bg-[#FDFBF7] text-slate-800 font-sans selection:bg-amber-500 selection:text-white">
+      {/* Global Top Navigation */}
+      <Header />
+
+      {/* Main Viewport Routed Content */}
+      <main className="flex-1 max-w-7xl w-full mx-auto px-3.5 sm:px-6 lg:px-8 pt-3 sm:pt-4 md:pt-6 pb-6">
+        <AppRouter />
+      </main>
+
+      {/* Global Footer */}
+      <Footer />
+
+      {/* Mobile Bottom Navigation Bar */}
+      <BottomNav />
+
+      {/* Global Location & Address Modal */}
+      <LocationModal />
+
+      {/* Global Authentication Modal */}
+      <AuthModal />
+
+      {/* Global Floating AI Support Chatbot */}
+      <ChatBotWidget />
+
+      {/* Global Dynamic Toast */}
+      <GlobalToast />
+    </div>
+  );
+}
+
 // Clean App Layout
 export default function App() {
   return (
@@ -43,34 +88,9 @@ export default function App() {
         <LocationProvider>
           <CartProvider>
             <OrderProvider>
-              <div className="min-h-screen flex flex-col bg-[#FDFBF7] text-slate-800 font-sans selection:bg-amber-500 selection:text-white">
-                
-                {/* Global Top Navigation */}
-                <Header />
-
-                {/* Main Viewport Routed Content */}
-                <main className="flex-1 max-w-7xl w-full mx-auto px-3.5 sm:px-6 lg:px-8 pt-3 sm:pt-4 md:pt-6 pb-6">
-                  <AppRouter />
-                </main>
-
-                {/* Global Footer */}
-                <Footer />
-
-                {/* Mobile Bottom Navigation Bar */}
-                <BottomNav />
-
-                {/* Global Location & Address Modal */}
-                <LocationModal />
-
-                {/* Global Authentication Modal */}
-                <AuthModal />
-
-                {/* Global Floating AI Support Chatbot */}
-                <ChatBotWidget />
-
-                {/* Global Dynamic Toast */}
-                <GlobalToast />
-              </div>
+              <VendorProvider>
+                <AppContent />
+              </VendorProvider>
             </OrderProvider>
           </CartProvider>
         </LocationProvider>

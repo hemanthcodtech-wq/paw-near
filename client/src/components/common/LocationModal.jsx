@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { 
   MapPin, 
   Navigation, 
@@ -59,24 +60,28 @@ export default function LocationModal() {
     addr.type.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-200">
-      <div className="bg-white rounded-3xl w-full max-w-lg shadow-2xl border border-amber-100 overflow-hidden max-h-[90vh] flex flex-col">
+  return createPortal(
+    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-slate-950/70 backdrop-blur-sm animate-in fade-in duration-200">
+      <div className="bg-white rounded-t-3xl sm:rounded-3xl w-full sm:max-w-lg shadow-2xl border border-slate-100 overflow-hidden max-h-[92vh] sm:max-h-[85vh] flex flex-col animate-in slide-in-from-bottom duration-300">
         
+        {/* Mobile Grab Bar */}
+        <div className="w-12 h-1.5 bg-slate-200 rounded-full mx-auto my-2 sm:hidden shrink-0" />
+
         {/* Modal Header */}
-        <div className="px-6 py-5 border-b border-slate-100 flex items-center justify-between bg-gradient-to-r from-amber-500/10 to-orange-500/10">
+        <div className="px-5 sm:px-6 py-3.5 sm:py-4 border-b border-slate-100 flex items-center justify-between bg-gradient-to-r from-amber-500/10 to-orange-500/10 shrink-0">
           <div className="flex items-center gap-2.5">
-            <div className="w-10 h-10 rounded-2xl bg-amber-500 text-white flex items-center justify-center shadow-md">
+            <div className="w-9 h-9 rounded-2xl bg-amber-500 text-white flex items-center justify-center shadow-md">
               <MapPin className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="font-heading font-bold text-slate-900 text-base">Select Delivery Location</h3>
-              <p className="text-xs text-slate-500">Find nearest pet stores & 15-min instant delivery</p>
+              <h3 className="font-heading font-black text-slate-900 text-sm sm:text-base">Select Delivery Location</h3>
+              <p className="text-[10px] sm:text-xs text-slate-500">Find nearest pet stores & 15-min instant delivery</p>
             </div>
           </div>
           <button
             onClick={() => setIsLocationModalOpen(false)}
-            className="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors"
+            className="w-8 h-8 rounded-full bg-white/80 hover:bg-white text-slate-600 flex items-center justify-center transition-colors shadow-2xs"
+            aria-label="Close"
           >
             <X className="w-4 h-4" />
           </button>
@@ -263,6 +268,7 @@ export default function LocationModal() {
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

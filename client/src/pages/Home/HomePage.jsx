@@ -219,9 +219,9 @@ export default function HomePage() {
         </div>
 
         {/* Horizontal Products Carousel */}
-        <div className="flex overflow-x-auto gap-3 sm:gap-4 pb-2 snap-x hide-scrollbar -mx-2 px-2">
+        <div className="flex overflow-x-auto gap-3 sm:gap-4 py-1 pb-3 snap-x hide-scrollbar -mx-2 px-2 items-stretch">
           {PRODUCTS.slice(4, 9).map((product) => (
-            <div key={product.id} className="snap-start flex-shrink-0">
+            <div key={product.id} className="snap-start flex-shrink-0 flex">
               <ProductCard product={product} layout="horizontal" />
             </div>
           ))}

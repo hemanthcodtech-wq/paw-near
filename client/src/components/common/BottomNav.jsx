@@ -15,7 +15,7 @@ export default function BottomNav() {
   ];
 
   return (
-    <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200/80 shadow-lg px-2 py-1 pb-safe">
+    <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200/90 shadow-[0_-4px_25px_rgba(0,0,0,0.08)] px-2 py-1.5 pb-[max(0.5rem,env(safe-area-inset-bottom))]">
       <nav className="flex items-center justify-around">
         {navItems.map((item) => {
           const Icon = item.icon;
@@ -24,9 +24,9 @@ export default function BottomNav() {
               key={item.label}
               to={item.path}
               className={({ isActive }) =>
-                `flex flex-col items-center justify-center py-1 px-3 rounded-xl transition-all relative select-none ${
+                `flex flex-col items-center justify-center py-1 px-2.5 rounded-2xl transition-all relative select-none min-w-[54px] ${
                   isActive
-                    ? 'text-[#E5A015] font-bold scale-105'
+                    ? 'text-slate-950 font-black'
                     : 'text-slate-500 hover:text-slate-800 font-medium'
                 }`
               }
@@ -34,14 +34,16 @@ export default function BottomNav() {
               {({ isActive }) => (
                 <>
                   <div className="relative">
-                    <Icon className={`w-5 h-5 ${isActive ? 'fill-[#E5A015] stroke-[#E5A015]' : 'stroke-[1.8px]'}`} />
+                    <div className={`p-1.5 rounded-xl transition-all duration-200 ${isActive ? 'bg-[#FFB703] text-slate-950 scale-105 shadow-xs ring-2 ring-amber-300/50' : 'hover:bg-slate-100'}`}>
+                      <Icon className={`w-5 h-5 ${isActive ? 'stroke-[2.5]' : 'stroke-[1.8px]'}`} />
+                    </div>
                     {item.badge > 0 && (
-                      <span className="absolute -top-1 -right-2 bg-rose-500 text-white text-[9px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center">
+                      <span className="absolute -top-1 -right-1.5 bg-rose-500 text-white text-[9px] font-black min-w-[16px] h-4 rounded-full flex items-center justify-center border-2 border-white shadow-xs">
                         {item.badge}
                       </span>
                     )}
                   </div>
-                  <span className="text-[10px] mt-0.5 tracking-tight font-semibold">{item.label}</span>
+                  <span className={`text-[10px] mt-0.5 tracking-tight ${isActive ? 'font-black text-slate-950' : 'font-medium text-slate-500'}`}>{item.label}</span>
                 </>
               )}
             </NavLink>

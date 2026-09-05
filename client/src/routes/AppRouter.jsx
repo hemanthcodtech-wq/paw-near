@@ -16,6 +16,16 @@ import SupportPage from '../pages/Support/SupportPage';
 import LoginPage from '../pages/Auth/LoginPage';
 import RegisterPage from '../pages/Auth/RegisterPage';
 
+// Vendor Module Pages & Layout (Section 4)
+import VendorLayout from '../components/vendor/VendorLayout';
+import VendorLoginPage from '../pages/Vendor/VendorLoginPage';
+import VendorOnboardingPage from '../pages/Vendor/VendorOnboardingPage';
+import VendorDashboardPage from '../pages/Vendor/VendorDashboardPage';
+import VendorProductsPage from '../pages/Vendor/VendorProductsPage';
+import VendorOrdersPage from '../pages/Vendor/VendorOrdersPage';
+import VendorDeliveryTeamPage from '../pages/Vendor/VendorDeliveryTeamPage';
+import VendorStoreProfilePage from '../pages/Vendor/VendorStoreProfilePage';
+
 export default function AppRouter() {
   const location = useLocation();
 
@@ -58,6 +68,19 @@ export default function AppRouter() {
 
       {/* In-App Customer Support & Returns */}
       <Route path="/support" element={<SupportPage />} />
+
+      {/* 4. Vendor Module Routes */}
+      <Route path="/vendor/login" element={<VendorLoginPage />} />
+      <Route path="/vendor/onboarding" element={<VendorOnboardingPage />} />
+      <Route path="/vendor/register" element={<VendorOnboardingPage />} />
+      
+      {/* 4.2 Vendor Store Management Routes with VendorLayout */}
+      <Route path="/vendor" element={<VendorLayout><VendorDashboardPage /></VendorLayout>} />
+      <Route path="/vendor/dashboard" element={<VendorLayout><VendorDashboardPage /></VendorLayout>} />
+      <Route path="/vendor/products" element={<VendorLayout><VendorProductsPage /></VendorLayout>} />
+      <Route path="/vendor/orders" element={<VendorLayout><VendorOrdersPage /></VendorLayout>} />
+      <Route path="/vendor/delivery-team" element={<VendorLayout><VendorDeliveryTeamPage /></VendorLayout>} />
+      <Route path="/vendor/store-profile" element={<VendorLayout><VendorStoreProfilePage /></VendorLayout>} />
 
       {/* Fallback Route */}
       <Route path="*" element={<Navigate to="/" replace />} />
